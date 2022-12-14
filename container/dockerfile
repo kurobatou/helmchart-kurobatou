@@ -1,0 +1,3 @@
+FROM nginx:latest
+RUN mv /usr/share/nginx/html/index.html /usr/share/nginx/html/index.html.old
+RUN echo "hola Mundo !! <br> :)" >> /usr/share/nginx/html/index.html
