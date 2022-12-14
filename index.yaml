@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  acme:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-12-14T12:41:44.820074-03:00"
+    description: Acme demo chart for kubernetes
+    digest: c1952645d9ada9984d7699d29fa9f93ac58f9a77583f969bd7d99f34fbb1c422
+    name: acme
+    type: application
+    urls:
+    - charts/acme-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-12-14T12:41:44.81744-03:00"
