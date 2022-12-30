@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: custom-streams-configmap
 data:
-  blackbox.yml: {{ toYalm.Values.configBlackboxExporter | indent 2}}
+  blackbox.yml: {{ incluce "toYalm" .Values.configBlackboxExporter | indent 2 }}
