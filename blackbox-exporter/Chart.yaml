@@ -3,9 +3,9 @@ name: blackbox-exporter
 description: A char with a blackbox-exporter with some configurations on values.yaml
 
 type: application
-version: 0.1.0
+version: 0.1.1
 maintainer:
   name: "Cristhian Saavedra"
   email: "batou2k@gmail.com"
 
-appVersion: "1.17.0"
+appVersion: "1.18.0"

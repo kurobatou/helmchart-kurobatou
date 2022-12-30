@@ -3,7 +3,7 @@ entries:
   acme:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-12-30T00:33:40.757924975-03:00"
+    created: "2022-12-30T02:19:47.563811-03:00"
     description: Acme demo chart for kubernetes
     digest: 44dd49000d481afbc5902c8ff37f8da84f91a5ab154020c5e06202057a4c85de
     name: acme
@@ -13,13 +13,23 @@ entries:
     version: 0.1.0
   blackbox-exporter:
   - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-12-30T00:33:40.758639207-03:00"
+    appVersion: 1.18.0
+    created: "2022-12-30T02:19:47.567142-03:00"
     description: A char with a blackbox-exporter with some configurations on values.yaml
-    digest: 880ede297284f570e0f5af0885f951fb6b000800de326bf5962c158a6400775a
+    digest: 06e73eddb8aea16fa62e379a24abe1e6d99bede47c72ab0708e6cc27d9ef000a
+    name: blackbox-exporter
+    type: application
+    urls:
+    - https://kurobatou.github.io/helmchart-kurobatou/charts/blackbox-exporter-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.17.0
+    created: "2022-12-30T02:19:47.565787-03:00"
+    description: A char with a blackbox-exporter with some configurations on values.yaml
+    digest: 8ab88cda2c0e27638547f7db422d4d8130fba087f08201971a40fb4fc2eab764
     name: blackbox-exporter
     type: application
     urls:
     - https://kurobatou.github.io/helmchart-kurobatou/charts/blackbox-exporter-0.1.0.tgz
     version: 0.1.0
-generated: "2022-12-30T00:33:40.757244543-03:00"
+generated: "2022-12-30T02:19:47.558784-03:00"
