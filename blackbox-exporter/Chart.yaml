@@ -4,8 +4,8 @@ description: A char with a blackbox-exporter with some configurations on values.
 
 type: application
 version: 0.1.0
+maintainer:
+  name: "Cristhian Saavedra"
+  email: "batou2k@gmail.com"
 
 appVersion: "1.17.0"
-maintainers:
-  name: Cristhian Saavedra
-  email: batou2k@gmail.com
