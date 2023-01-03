@@ -68,8 +68,7 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
 
-configBlackboxExporter: |-
-  streams {
+configBlackboxExporter: |
         scrape_configs:
           - job_name: 'blackbox'
             metrics_path: /probe
@@ -88,7 +87,6 @@ configBlackboxExporter: |-
                 target_label: instance
               - target_label: __address__
                 replacement: 127.0.0.1:9115  # The blackbox exporter's real hostname:port.
-  }
 
 autoscaling:
   enabled: false
