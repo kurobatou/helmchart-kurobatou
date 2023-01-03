@@ -1,6 +1,6 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: blackbox_config_{{ .Chart.Name }}
+  name: blackbox-config-{{ .Chart.Name }}
 data:
   blackbox.yml: {{- .Values.configBlackboxExporter | toYaml |  indent 2 }}
