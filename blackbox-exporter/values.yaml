@@ -68,6 +68,7 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
 
+# configBlackboxExporter, es el archivo de configuracion de blackbox-exporter, este es un ejemplo 
 configBlackboxExporter: |
         scrape_configs:
           - job_name: 'blackbox'
