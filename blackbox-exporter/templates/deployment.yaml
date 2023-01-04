@@ -34,7 +34,7 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           volumeMounts:
-          - name: "blackbox-config-{{ .Chart.Name }}"
+          - name: "blackbox-vol-{{ .Chart.Name }}"
             mountPath: /config
           ports:
             - name: http
@@ -51,8 +51,8 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
-       volumes:
-        - name: "blackbox-config-{{ .Chart.Name }}"
+      volumes:
+        - name: "blackbox-vol-{{ .Chart.Name }}"
           configMap:
             name: "blackbox-config-{{ .Chart.Name }}"
             items:
