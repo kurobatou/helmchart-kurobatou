@@ -27,12 +27,22 @@ spec:
       serviceAccountName: {{ include "acme.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      volumes:
+        - name: "acme-vol-{{ .Chart.Name }}"
+          configMap:
+            name: "acme-config-{{ .Chart.Name }}"
+            items:
+            - key: index.html
+              path: index.html
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          volumeMounts:
+          - name: "acme-vol-{{ .Chart.Name }}"
+            mountPath: /usr/share/nginx/html/
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
