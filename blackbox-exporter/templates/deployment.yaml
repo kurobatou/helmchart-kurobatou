@@ -27,6 +27,13 @@ spec:
       serviceAccountName: {{ include "blackbox-exporter.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      volumes:
+        - name: "blackbox-vol-{{ .Chart.Name }}"
+          configMap:
+            name: "blackbox-config-{{ .Chart.Name }}"
+            items:
+            - key: blackbox.yml
+              path: blackbox.yml
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
